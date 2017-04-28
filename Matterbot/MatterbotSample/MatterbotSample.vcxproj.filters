@@ -59,6 +59,9 @@
     <ClInclude Include="ComputeHash.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SetLevel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Challenges.h">
       <Filter>Header Files</Filter>
     </ClInclude>

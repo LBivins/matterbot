@@ -1,6 +1,8 @@
 #include "Matterbot.h"
-#include <iostream>
+#include <map>
+#include <vector>
 #include <sstream>
+#include <iostream>
 #include "ConsoleLogger.h"
 #include "EchoCommand.h"
 #include "SleepCommand.h"
@@ -9,9 +11,8 @@
 #include "ReverseCommand.h"
 #include "AutomotiveCommand.h"
 #include "ComputeHash.h"
+#include "SetLevel.h"
 #include "Challenges.h"
-#include <map>
-#include <vector>
 
 #define ERROR_SUCCESS 0
 #define ERROR_FAILURE -1
@@ -33,6 +34,7 @@ int main() {
 		bot->register_command(make_shared<EchoCommand>());
 		bot->register_command(make_shared<JokeCommand>());
 		bot->register_command(make_shared<SleepCommand>());
+		bot->register_command(make_shared<LevelCommand>(bot));
 		bot->register_command(make_shared<ChallengeCommand>(bot));
 		bot->register_command(make_shared<ComputeHashCommand>());
 		bot->register_command(make_shared<AutomotiveCommand>());
@@ -40,12 +42,12 @@ int main() {
 		bot->register_command(make_shared<ReverseCommand>(bot));
 		bot->post_message(welcome_message);
 
-		string password = "pshdft";
+		string password = "fzqaqq";
 		hashMap.emplace(
 			compute_md5(password.c_str(),
 				password.size()), password
 		);
-		for (auto i = 1; i < 11; i++)
+		for (auto i = 1; i < 14; i++)
 		{
 			//Contruct the Combinator.
 			auto combinator = Combinator("hsoj", i);
